@@ -1,8 +1,7 @@
 package exercises.flight.search;
-
 import static org.junit.Assert.*;
 
-import org.junit.*;
+import org.junit.Test;
 
 public class SearchConditionsTest {
 
@@ -15,6 +14,7 @@ public class SearchConditionsTest {
     public void testNullOrigin() {
         assertNull(new SearchConditions(null, "destination"));
     }
+    
 
     @Test(expected = IllegalArgumentException.class)
     public void testNullDestination() {

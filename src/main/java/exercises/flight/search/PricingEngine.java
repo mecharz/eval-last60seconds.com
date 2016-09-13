@@ -1,5 +1,4 @@
 package exercises.flight.search;
-
 import java.util.*;
 
 public interface PricingEngine {
