@@ -8,7 +8,7 @@ public class FileUtil {
 
     public static Reader getFileReader(String pathName, String fileName) throws IOException {
 
-        Path path = Paths.get("src/test/resources", "sample.csv");
+        Path path = Paths.get(pathName, fileName);
         return Files.newBufferedReader(path, Charset.forName("UTF-8"));
     }
 }
