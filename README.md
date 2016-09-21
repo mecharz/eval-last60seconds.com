@@ -8,3 +8,4 @@ Some notes about CI, codecov:
 - Missed lines in code coverage means some code hasn't been tested, whether it be an Exception, so we have tips to write better Tests.
 - Code in constructors may not be covered, but it should.
 - Documentation branch can be merged to master, only if visibility requires it.
+- If github repo is deleted, recreating it has no chances of keeping the old build history. The same applies to other integrations since lots of id's and tokens will change
