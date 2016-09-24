@@ -11,8 +11,8 @@ import java.util.*;
 
 public class PricingEngineByDaysToDepartureAndNumPersonsTest  {
 
-    String SAMPLES_CSV_FILEPATH = "src/test/resources";
-    String SAMPLES_CSV_FILENAME = "sample.csv";
+    private static final String SAMPLES_CSV_FILEPATH = "src/test/resources";
+    private static final String SAMPLES_CSV_FILENAME = "sample.csv";
     
     @Test
     public void testCalculateTicketsEdgeCaseNoPersons() {

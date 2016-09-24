@@ -49,18 +49,19 @@ public class PricingEngineByDaysToDepartureAndNumPersons implements PricingEngin
 
     private BigDecimal calculatePriceFromDaysRules(PricingModifiers pricingModifiers, BigDecimal price) {
 
+        BigDecimal calculatedPrice= new BigDecimal(-1);
         int daysToGo = pricingModifiers.daysToDeparture;
         if (daysToGo > 30) {
-            price = price.multiply(MULTIPLICAND_FOR_MORE_THAN_30_DAYS);
+            calculatedPrice = price.multiply(MULTIPLICAND_FOR_MORE_THAN_30_DAYS);
         } else if (daysToGo <= 15 && daysToGo >= 3) {
-            price = price.multiply(MULTIPLICAND_FOR_LESS_THAN_16_AND_MORE_THAN_3_DAYS);
+            calculatedPrice = price.multiply(MULTIPLICAND_FOR_LESS_THAN_16_AND_MORE_THAN_3_DAYS);
         } else if (daysToGo < 3 && daysToGo >= 0) {
-            price = price.multiply(MULTIPLICAND_FOR_LESS_THAN_3_DAYS);
+            calculatedPrice = price.multiply(MULTIPLICAND_FOR_LESS_THAN_3_DAYS);
         } else if (daysToGo < 0) {
             // Set a negative value to back-in-time prices, to use when filtering
-            price = BigDecimal.ZERO.subtract(BigDecimal.ONE);
+            calculatedPrice = BigDecimal.ZERO.subtract(BigDecimal.ONE);
         }
-        return price;
+        return calculatedPrice;
     }
 
     private BigDecimal calculateAdultsPrice(PricingModifiers pricingModifiers, BigDecimal unitPrice) {

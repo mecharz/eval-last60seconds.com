@@ -13,9 +13,9 @@ import exercises.flight.search.util.*;
 
 public class SearchEngineByOriginAndDestinationTest {
 
-    String SAMPLES_CSV_FILEPATH = "src/test/resources";
-    String SAMPLES_CSV_FILENAME = "sample.csv";
-    String SAMPLES_CSV_FILENAME_OFFAKE = "fake.csv";
+    private static final String SAMPLES_CSV_FILEPATH = "src/test/resources";
+    private static final String SAMPLES_CSV_FILENAME = "sample.csv";
+    private static final String SAMPLES_CSV_FILENAME_OFFAKE = "fake.csv";
     
     @Test
     public void testNonexistentInputFile() {
