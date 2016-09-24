@@ -58,7 +58,7 @@ public class SearchEngineByOriginAndDestinationTest {
 
         SearchEngine engine = new SearchEngineByOriginAndDestinationInCSVStream(getValidReader());
         
-        List<FlightTicket> matchingFlightTickets = engine.getFlightTickets(new SearchConditions("XXX", "MAD"));
+        List<FlightTicket> matchingFlightTickets = engine.getFlightTickets(new SearchConditions(":-)", "MAD"));
         assertThat(matchingFlightTickets.isEmpty(), is(true));
     }
 
@@ -67,7 +67,7 @@ public class SearchEngineByOriginAndDestinationTest {
 
         SearchEngine engine = new SearchEngineByOriginAndDestinationInCSVStream(getValidReader());
         
-        List<FlightTicket> matchingFlightTickets = engine.getFlightTickets(new SearchConditions("CDG", "XXX"));
+        List<FlightTicket> matchingFlightTickets = engine.getFlightTickets(new SearchConditions("CDG", ";-)"));
         assertThat(matchingFlightTickets.isEmpty(), is(true));
     }
 

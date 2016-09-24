@@ -59,7 +59,6 @@ public class PricingEngineByDaysToDepartureAndNumPersonsTest  {
         //          * LH5909, 90.4 €
         PricingModifiers pricingModifiers = new PricingModifiers();
         // pricingModifiers.daysToDeparture = 30;
-        // TODO: Ask why examples are 30/31 divergent with rules. Deal as if rules are right and examples wrong.
         pricingModifiers.daysToDeparture = 31;
         pricingModifiers.numAdults = 1;
 
